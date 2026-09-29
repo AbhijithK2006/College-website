@@ -1,0 +1,236 @@
+<html>
+<head>
+   <title>Academics | Apex Institute of Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">Apex Institute</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="academics.html" class="active" id="nav-academics">Academics</a></li>
+          <li><a href="admissions.html" id="nav-admissions">Admissions</a></li>
+          <li><a href="campus.html" id="nav-campus">Campus Life</a></li>
+          <li><a href="login.html" id="nav-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Academics Header">
+    <h1>Academic Departments & Curriculums</h1>
+    <p>AIT offers standardized four-year bachelor's degrees and two-year postgraduate courses across engineering and computer science.</p>
+  </section>
+
+  <main>
+    <section class="section" aria-label="Our Departments">
+      <div class="section-header">
+        <h2 class="section-title">Academic Schools</h2>
+        <p class="section-subtitle">Our degree courses are designed and administered by three core technical schools.</p>
+      </div>
+      
+      <div class="grid-three">
+        <div class="card" id="school-computing">
+          <h3 class="card-title">School of Computing</h3>
+          <p>Offers undergraduate courses in Computer Science, Software Architecture, and Artificial Intelligence fields.</p>
+        </div>
+        
+        <div class="card" id="school-engineering">
+          <h3 class="card-title">School of Engineering</h3>
+          <p>Coordinates hands-on prototyping degrees in Robotics, Mechatronics, and Sustainable Electric Grids.</p>
+        </div>
+        
+        <div class="card" id="school-design">
+          <h3 class="card-title">School of Tech Design</h3>
+          <p>Focuses on Human-Computer Interaction, Interface Design paradigms, and virtual usability frameworks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;" aria-label="Program List">
+      <div class="section-header">
+        <h2 class="section-title">Undergraduate Course Details</h2>
+        <p class="section-subtitle">A summary table outlining our bachelor's programs, duration, and admission requirements.</p>
+      </div>
+      
+      <div style="margin-bottom: 1.5rem; text-align: center;">
+        <input type="text" id="course-search" placeholder="🔍 Search courses by code, name, or department (e.g. BCA, Computing)..." style="width: 100%; max-width: 550px; padding: 0.75rem 1rem; border: 2px solid #990000; border-radius: 4px; font-size: 0.95rem;">
+      </div>
+
+      <div class="table-container">
+        <table id="ug-programs-table">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Degree Program</th>
+              <th scope="col">Academic Department</th>
+              <th scope="col">Duration</th>
+              <th scope="col">Semester Fee</th>
+              <th scope="col">Entry Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>BCA-101</strong></td>
+              <td><span class="badge-program">BCA</span> Bachelor of Computer Applications</td>
+              <td>School of Computing</td>
+              <td>3 Years (6 Semesters)</td>
+              <td>₹12,000</td>
+              <td>12th Grade / Math Priority</td>
+            </tr>
+            <tr>
+              <td><strong>BSC-102</strong></td>
+              <td><span class="badge-program">B.Sc.</span> Computer Science</td>
+              <td>School of Computing</td>
+              <td>3 Years (6 Semesters)</td>
+              <td>₹15,000</td>
+              <td>12th Grade / Science Stream</td>
+            </tr>
+            <tr>
+              <td><strong>BBA-103</strong></td>
+              <td><span class="badge-program">BBA</span> Bachelor of Business Administration</td>
+              <td>School of Management</td>
+              <td>3 Years (6 Semesters)</td>
+              <td>₹14,000</td>
+              <td>12th Grade / Any Stream</td>
+            </tr>
+            <tr>
+              <td><strong>BCM-104</strong></td>
+              <td><span class="badge-program">B.Com</span> Bachelor of Commerce</td>
+              <td>School of Commerce</td>
+              <td>3 Years (6 Semesters)</td>
+              <td>₹10,500</td>
+              <td>12th Grade / Commerce Stream</td>
+            </tr>
+            <tr>
+              <td><strong>BCM-105</strong></td>
+              <td><span class="badge-program">B.Com IF</span> International Finance</td>
+              <td>School of Commerce</td>
+              <td>3 Years (6 Semesters)</td>
+              <td>₹18,000</td>
+              <td>12th Grade / Commerce & Math</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section-header" style="margin-top: 3rem; margin-bottom: 2.5rem;">
+        <h2 class="section-title">Postgraduate Course Details</h2>
+        <p class="section-subtitle">A summary table outlining our master's programs, duration, and admission requirements.</p>
+      </div>
+
+      <div class="table-container">
+        <table id="pg-programs-table">
+          <thead>
+            <tr>
+              <th scope="col">Code</th>
+              <th scope="col">Degree Program</th>
+              <th scope="col">Academic Department</th>
+              <th scope="col">Duration</th>
+              <th scope="col">Semester Fee</th>
+              <th scope="col">Entry Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>MCA-201</strong></td>
+              <td><span class="badge-program">MCA</span> Master of Computer Applications</td>
+              <td>School of Computing</td>
+              <td>2 Years (4 Semesters)</td>
+              <td>₹16,500</td>
+              <td>BCA or B.Sc. CS Graduation</td>
+            </tr>
+            <tr>
+              <td><strong>MSC-202</strong></td>
+              <td><span class="badge-program">M.Sc.</span> Computer Science</td>
+              <td>School of Computing</td>
+              <td>2 Years (4 Semesters)</td>
+              <td>₹17,000</td>
+              <td>B.Sc. CS or BCA Graduation</td>
+            </tr>
+            <tr>
+              <td><strong>MBA-203</strong></td>
+              <td><span class="badge-program">MBA</span> Master of Business Administration</td>
+              <td>School of Management</td>
+              <td>2 Years (4 Semesters)</td>
+              <td>₹19,500</td>
+              <td>Graduation / Entrance Cleared</td>
+            </tr>
+            <tr>
+              <td><strong>MCM-204</strong></td>
+              <td><span class="badge-program">M.Com</span> Master of Commerce</td>
+              <td>School of Commerce</td>
+              <td>2 Years (4 Semesters)</td>
+              <td>₹13,500</td>
+              <td>B.Com or BBA Graduation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section canvas-section" aria-label="Academic Facilities">
+      <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Campus Facilities</h2>
+      <p style="margin-bottom: 1.5rem;">AIT supports academic learning through well-maintained spaces and specialized libraries.</p>
+      <ul class="styled-list">
+        <li>
+          <strong>Workstation Classrooms</strong>
+          Dual-monitor desktop hubs integrated with testing database sandboxes.
+        </li>
+        <li>
+          <strong>Electronics Lab</strong>
+          Equipped with oscilloscopes, signal boards, mechatronics kits, and soldering stations.
+        </li>
+        <li>
+          <strong>Main Library Quad</strong>
+          Three floors of print volumes, journals, and dedicated research study desks.
+        </li>
+        <li>
+          <strong>Digital Libraries</strong>
+          Every student receives online credentials to consult IEEE archives and cataloged journals 24/7.
+        </li>
+        <li>
+          <strong>Study Lounges</strong>
+          Comfortable workrooms for students preparing projects, hackathons, and tech seminars.
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <span class="logo-text">Apex Institute</span>
+          </div>
+          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <p>
+            Vazhayur, Malappuram,<br>
+            Kerala.<br><br>
+            Email: admissions@apex.edu.mock<br>
+            Phone: +91 XXXXXXXXXX
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<html>
+<head>
+   <title>Admissions | Apex Institute of Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">Apex Institute</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="academics.html" id="nav-academics">Academics</a></li>
+          <li><a href="admissions.html" class="active" id="nav-admissions">Admissions</a></li>
+          <li><a href="campus.html" id="nav-campus">Campus Life</a></li>
+          <li><a href="login.html" id="nav-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Admissions Header">
+    <h1>Admission Inquiry Portal</h1>
+    <p>Please complete our undergraduate program inquiry form below. Our administrative department will review your submissions soon.</p>
+  </section>
+
+  <main>
+    <section class="section" aria-label="Application Inquiry">
+      <div class="section-header">
+        <h2 class="section-title">Inquiry Form</h2>
+        <p class="section-subtitle">Provide details about your academic interests and high school background.</p>
+      </div>
+
+      <div class="form-card">
+        <form action="process_admission.php" method="POST" id="inquiry-form">
+          
+          <div class="form-group">
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="e.g. John Smith" required autocomplete="name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="e.g. john.smith@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 555-019-9234" required autocomplete="tel">
+            </div>
+            
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="program-select">Intended Program of Study *</label>
+            <select id="program-select" name="program" required>
+              <option value="" disabled selected>-- Select a degree option --</option>
+              <optgroup label="Undergraduate Programs">
+                <option value="bca">BCA</option>
+                <option value="bsc-cs">B.Sc. Computer Science</option>
+                <option value="bba">BBA</option>
+                <option value="bcom">B.Com</option>
+                <option value="bcom-if">B.Com IF</option>
+              </optgroup>
+              <optgroup label="Postgraduate Programs">
+                <option value="mca">MCA</option>
+                <option value="msc-cs">M.Sc. Computer Science</option>
+                <option value="mba">MBA</option>
+                <option value="mcom">M.Com</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Student Interests (Select all that apply)</label>
+            <div class="checkbox-group">
+              <label class="option-label">
+                <input type="checkbox" name="interests" value="coding">
+                Coding & Algorithm Club
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="interests" value="robotics">
+                Mechatronics & Automated Systems
+              </label>
+              <label class="option-label">
+                <input type="checkbox" name="interests" value="athletics">
+                Sports Teams & Track Field
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sop">Academic Goals Summary *</label>
+            <textarea id="sop" name="sop" placeholder="Please outline your objectives and why you chose AIT..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="option-label">
+              <input type="checkbox" name="consent" required>
+              I certify that all details submitted above are accurate.
+            </label>
+          </div>
+
+          <div class="form-disclaimer">
+            * Indicates a mandatory field. All details are kept confidential under student registration policies.
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;" id="form-submit-btn">Submit Inquiry</button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <span class="logo-text">Apex Institute</span>
+          </div>
+          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <p>
+            Vazhayur, Malappuram,<br>
+            Kerala.<br><br>
+            Email: admissions@apex.edu.mock<br>
+            Phone: +91 XXXXXXXXXX
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<head>
+   <title>Login / Register | Apex Institute of Technology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="header-logo">
+        <div class="logo-icon">A</div>
+        <span class="logo-text">Apex Institute</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="academics.html" id="nav-academics">Academics</a></li>
+          <li><a href="admissions.html" id="nav-admissions">Admissions</a></li>
+          <li><a href="campus.html" id="nav-campus">Campus Life</a></li>
+          <li><a href="login.html" class="active" id="nav-login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-label="Portal Header">
+    <h1>Student Portal Access</h1>
+    <p>Sign in to check course enrolments or create a new student account to submit registration files.</p>
+  </section>
+
+  <main>
+    <section class="section" aria-label="Account Access Form">
+      <div class="grid-three">
+        
+        <div class="card" id="login-panel">
+          <h3 class="card-title">Student Login</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="login-username">Email / Username *</label>
+              <input type="text" id="login-username" name="username" placeholder="e.g. john.smith" required autocomplete="username">
+            </div>
+            
+            <div class="form-group">
+              <label for="login-password">Password *</label>
+              <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+            </div>
+            
+
+            
+            <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">Sign In</button>
+          </form>
+        </div>
+
+        <div class="card" id="register-panel">
+          <h3 class="card-title">New Registration</h3>
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="register-name">Full Name *</label>
+              <input type="text" id="register-name" name="name" placeholder="e.g. Jane Doe" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="register-email">Email Address *</label>
+              <input type="email" id="register-email" name="email" placeholder="e.g. jane.doe@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="register-password">Password *</label>
+              <input type="password" id="register-password" name="password" placeholder="••••••••" required autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+              <label for="register-confirm">Confirm Password *</label>
+              <input type="password" id="register-confirm" name="confirm-password" placeholder="••••••••" required autocomplete="new-password">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">Register Account</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <span class="logo-text">Apex Institute</span>
+          </div>
+          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <p>
+            Vazhayur, Malappuram,<br>
+            Kerala.<br><br>
+            Email: admissions@apex.edu.mock<br>
+            Phone: +91 XXXXXXXXXX
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
