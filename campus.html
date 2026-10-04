@@ -1,15 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Campus Life | Apex Institute of Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Life &amp; Facilities | Apex Institute of Technology</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Top Notice Ribbon -->
+  <div class="top-notice-bar">
+    <div class="top-notice-content">
+      <div class="top-notice-badges">
+        <span class="accred-badge">Campus Tour</span>
+        <span>45-Acre Eco-Friendly Campus &bull; Autonomous Engineering Institution</span>
+      </div>
+      <div class="top-quick-links">
+        <a href="admissions.html">Admissions 2026–27</a>
+        <a href="login.html">Student Portal</a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo" id="header-logo">
         <div class="logo-icon">A</div>
-        <span class="logo-text">Apex Institute</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Apex Institute</span>
+          <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+        </div>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -24,15 +44,17 @@
   </header>
 
   <section class="hero" aria-label="Campus Life Header">
-    <h1>Apex Campus & Student Activities</h1>
-    <p>Explore our campus architecture, modern student study lounges, clean laboratory classrooms, and athletic fields.</p>
+    <h1>Life on the Apex Campus</h1>
+    <p>Discover an inspiring collegiate community spread across 45 lush green acres, featuring world-class laboratories, research libraries, athletic fields, and active student societies.</p>
   </section>
 
   <main>
+    <!-- Section 1: Campus Photo Gallery -->
     <section class="section" aria-label="Campus Gallery">
       <div class="section-header">
-        <h2 class="section-title">Campus Tour Gallery</h2>
-        <p class="section-subtitle">A clean overview of our active study zones and modern laboratory centers.</p>
+        <span class="section-tag">Campus Tour</span>
+        <h2 class="section-title">Explore Our Facilities &amp; Grounds</h2>
+        <p class="section-subtitle">Click any image to view details about student access, laboratory hours, and campus amenities.</p>
       </div>
 
       <div class="gallery-grid">
@@ -40,32 +62,74 @@
           <img src="photos/campus_hero.png" alt="AIT Main Quadrangle and Administration Building">
           <div class="gallery-caption">
             <h4>Academic Quadrangle</h4>
-            <p>The core quad area, featuring glass-faced tech centers and green reading lawns.</p>
+            <p>The iconic brick and ivy centerpiece featuring open-air amphitheaters, green study lawns, and wireless internet connectivity.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" id="gallery-robotics">
+          <img src="photos/robotics_lab.jpg" alt="AIT Robotics and Advanced Fabrication Laboratory">
+          <div class="gallery-caption">
+            <h4>Robotics &amp; Prototyping Hub</h4>
+            <p>24/7 access maker lab equipped with robotic arms, 3D printers, oscilloscopes, and IoT development boards.</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" id="gallery-convocation">
+          <img src="photos/convocation.jpg" alt="AIT Graduation and Convocation Day">
+          <div class="gallery-caption">
+            <h4>Graduation &amp; Convocation</h4>
+            <p>Celebrating academic achievements, alumni honors, and career placement successes in our university auditorium.</p>
           </div>
         </div>
 
         <div class="gallery-item" id="gallery-library">
           <img src="photos/library.png" alt="AIT Central Library study desks and book shelves">
           <div class="gallery-caption">
-            <h4>Central Library Study Room</h4>
-            <p>Offers quiet study spaces, reference libraries, and group project consultation tables.</p>
+            <h4>Central Research Library</h4>
+            <p>Modern quiet study zones, 85,000+ volumes, international digital journal repositories, and private group discussion suites.</p>
           </div>
         </div>
 
         <div class="gallery-item" id="gallery-classroom">
           <img src="photos/classroom.png" alt="Modern computer lab and research classroom">
           <div class="gallery-caption">
-            <h4>School Workstations</h4>
-            <p>State-of-the-art computer labs configured for programming and microelectronics prototyping.</p>
+            <h4>High-Performance Computing Suites</h4>
+            <p>Configured with high-end GPU workstations for machine learning, distributed cloud simulations, and software development.</p>
           </div>
         </div>
 
         <div class="gallery-item" id="gallery-sports">
           <img src="photos/sports.png" alt="Outdoor athletic running track and soccer field">
           <div class="gallery-caption">
-            <h4>Falcon Athletics Center</h4>
-            <p>Our outdoor sports field, running track, and student recreation center.</p>
+            <h4>Falcon Athletics Stadium</h4>
+            <p>FIFA-spec football turf, 400m synthetic running track, floodlit basketball courts, and collegiate sports coaching.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Student Experience & Clubs -->
+    <section class="section" style="padding-top: 0;" aria-label="Student Clubs">
+      <div class="section-header">
+        <span class="section-tag">Co-Curriculars</span>
+        <h2 class="section-title">Clubs &amp; Student Organizations</h2>
+        <p class="section-subtitle">Beyond academics: develop leadership, hone technical skills, and form lifelong friendships through our 25+ student-run chapters.</p>
+      </div>
+
+      <div class="grid-three">
+        <div class="card">
+          <h3 class="card-title">CodeApex &amp; ACM Chapter</h3>
+          <p>Organizes national-level 24-hour hackathons, competitive programming bootcamps, and open-source software contribution marathons.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">RoboTech Society</h3>
+          <p>Designs autonomous combat robots, racing drones, and agricultural assistive drones competing in national robotics competitions.</p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Fine Arts &amp; Cultural Guild</h3>
+          <p>Hosts 'Aura', the annual multi-day cultural festival featuring inter-college music battles, theatrical dramas, and photography exhibitions.</p>
         </div>
       </div>
     </section>
@@ -77,18 +141,41 @@
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">A</div>
-            <span class="logo-text">Apex Institute</span>
+            <div class="logo-text-group">
+              <span class="logo-text">Apex Institute</span>
+              <span class="logo-tagline" style="color: #9ca3af;">Technology &bull; Research &bull; Leadership</span>
+            </div>
           </div>
-          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+          <p>Apex Institute of Technology is dedicated to delivering holistic student experiences, state-of-the-art infrastructure, and technical leadership.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Details</h4>
+          <h4>Academics</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">School of Computing</a></li>
+            <li><a href="academics.html">School of Engineering</a></li>
+            <li><a href="academics.html">Curriculum &amp; Syllabus</a></li>
+            <li><a href="login.html">Student Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Campus Life</h4>
+          <ul class="footer-links">
+            <li><a href="campus.html">Central Library</a></li>
+            <li><a href="campus.html">Athletics &amp; Sports</a></li>
+            <li><a href="campus.html">Student Societies</a></li>
+            <li><a href="campus.html">Hostel Facilities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Campus</h4>
           <p>
             Vazhayur, Malappuram,<br>
-            Kerala.<br><br>
-            Email: admissions@apex.edu.mock<br>
-            Phone: +91 XXXXXXXXXX
+            Kerala &ndash; 673633.<br><br>
+            <strong>Admissions:</strong> admissions@apex.edu.mock<br>
+            <strong>Phone:</strong> +91 483 2890000
           </p>
         </div>
       </div>

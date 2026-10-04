@@ -1,15 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Home | Apex Institute of Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Institute of Technology | Autonomous Engineering &amp; Computing College</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Top Notice / University Accreditation Ribbon -->
+  <div class="top-notice-bar">
+    <div class="top-notice-content">
+      <div class="top-notice-badges">
+        <span class="accred-badge">NAAC A++</span>
+        <span>Autonomous Engineering Institution &bull; Affiliated to KTU &bull; Approved by AICTE</span>
+      </div>
+      <div class="top-quick-links">
+        <span>Admissions Helpline: +91 483 2890000</span>
+        <a href="admissions.html">Admissions 2026–27</a>
+        <a href="login.html">Student Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo" id="header-logo">
         <div class="logo-icon">A</div>
-        <span class="logo-text">Apex Institute</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Apex Institute</span>
+          <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+        </div>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -23,45 +45,147 @@
     </div>
   </header>
 
+  <!-- Hero Section with Campus Photography -->
   <section class="hero" aria-label="Welcome Banner">
-    <h1>Apex Institute of Technology</h1>
-    <p>Empowering students through technical excellence, rigorous academics, and a supportive collegiate community since 1998.</p>
+    <h1>Engineering the Future,<br>Empowering Leaders</h1>
+    <p>Fostering academic rigor, computational innovation, and world-class career placements across engineering and computing disciplines since 1998.</p>
     <div class="hero-btns">
-      <a href="admissions.html" class="btn btn-primary" id="hero-btn-apply">Inquire Now</a>
+      <a href="admissions.html" class="btn btn-primary" id="hero-btn-apply">Apply for Admission &rarr;</a>
       <a href="academics.html" class="btn btn-outline" id="hero-btn-courses">Explore Programs</a>
+      <a href="campus.html" class="btn btn-outline" id="hero-btn-campus">Virtual Campus Tour</a>
     </div>
   </section>
 
+  <!-- Fast Facts / Collegiate Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-strip-grid">
+      <div class="stat-strip-item">
+        <div class="stat-strip-num">28+</div>
+        <div class="stat-strip-label">Years of Academic Heritage</div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-num">96.4%</div>
+        <div class="stat-strip-label">Campus Placement Rate</div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-num">45+</div>
+        <div class="stat-strip-label">Acre Lush Green Campus</div>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-num">15,000+</div>
+        <div class="stat-strip-label">Alumni Worldwide</div>
+      </div>
+    </div>
+  </div>
+
   <main>
+    <!-- Section 1: Academic & Research Excellence with Photos -->
     <section class="section" aria-label="Key Highlights">
       <div class="section-header">
-        <h2 class="section-title">Why Choose Apex?</h2>
-        <p class="section-subtitle">A quick overview of what sets our technical education apart.</p>
+        <span class="section-tag">Academic Excellence</span>
+        <h2 class="section-title">Why Choose Apex Institute?</h2>
+        <p class="section-subtitle">Experience a dynamic campus environment blending rigorous theoretical foundations with industry-sponsored research laboratories.</p>
       </div>
       
       <div class="grid-three">
-        <div class="card" id="card-faculty">
-          <h3 class="card-title">Top Faculty</h3>
-          <p>Learn from industry experts, leading scientists, and dedicated mentors in classrooms designed for collaboration.</p>
+        <!-- Feature Photo Card 1: Computing -->
+        <div class="photo-card" id="card-computing">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/classroom.png" alt="Advanced Computer Science Lab Workstations at Apex Institute">
+            <span class="photo-card-badge">Tech Excellence</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>School of Computing &amp; AI</h3>
+            <p>Master computational algorithms, machine intelligence, full-stack architecture, and cloud networks on high-performance laboratory clusters.</p>
+            <a href="academics.html" class="photo-card-link">Explore Computing Programs &rarr;</a>
+          </div>
         </div>
-        
-        <div class="card" id="card-research">
-          <h3 class="card-title">Advanced Labs</h3>
-          <p>Gain practical mechatronics, computer science, and computing experience using modern hardware benches.</p>
+
+        <!-- Feature Photo Card 2: Robotics & Engineering -->
+        <div class="photo-card" id="card-research">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/robotics_lab.jpg" alt="Robotics and Engineering Research Lab at Apex Institute">
+            <span class="photo-card-badge">Innovation Hub</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>Robotics &amp; Mechatronics</h3>
+            <p>Hands-on hardware fabrication, micro-controller programming, autonomous systems, and industrial robotics prototyping in modern maker suites.</p>
+            <a href="academics.html" class="photo-card-link">Explore Engineering Labs &rarr;</a>
+          </div>
         </div>
-        
-        <div class="card" id="card-placements">
-          <h3 class="card-title">Great Placements</h3>
-          <p>We boast high graduation placement rates through close linkages with regional technology partners.</p>
+
+        <!-- Feature Photo Card 3: Placements & Graduation -->
+        <div class="photo-card" id="card-placements">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/convocation.jpg" alt="Graduation Convocation Ceremony at Apex Institute">
+            <span class="photo-card-badge">Industry Placement</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>Exceptional Career Placements</h3>
+            <p>Over 120+ leading multinational technology firms recruit directly from our campus, with top tier packages and global internships.</p>
+            <a href="admissions.html" class="photo-card-link">View Placement Records &rarr;</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Section 2: Campus Life Highlights with Photo Teasers -->
+    <section class="section" style="padding-top: 0;" aria-label="Campus Life Overview">
+      <div class="section-header">
+        <span class="section-tag">Student Experience</span>
+        <h2 class="section-title">Vibrant Campus &amp; Student Life</h2>
+        <p class="section-subtitle">Beyond textbooks: modern residential dormitories, 24/7 digital library research halls, and outdoor athletic stadiums.</p>
+      </div>
+
+      <div class="grid-three">
+        <div class="photo-card">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/library.png" alt="AIT Central Digital Library">
+            <span class="photo-card-badge">Learning Hub</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>Central Digital Library</h3>
+            <p>Access over 85,000 volumes, international IEEE/ACM journals, silent reading pods, and multimedia research stations.</p>
+            <a href="campus.html" class="photo-card-link">Take Library Tour &rarr;</a>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/sports.png" alt="Apex Falcon Athletics Sports Complex">
+            <span class="photo-card-badge">Athletics &amp; Sports</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>Falcon Athletics Complex</h3>
+            <p>Olympic-standard athletic track, floodlit football turf, indoor basketball arena, and university wellness fitness suites.</p>
+            <a href="campus.html" class="photo-card-link">View Sports Facilities &rarr;</a>
+          </div>
+        </div>
+
+        <div class="photo-card">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/campus_hero.png" alt="Apex Quadrangle Campus Architecture">
+            <span class="photo-card-badge">45 Acre Campus</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>The Academic Quadrangle</h3>
+            <p>Eco-friendly botanical garden lawns, high-speed Wi-Fi throughout, amphitheater, and modern student cafeteria.</p>
+            <a href="campus.html" class="photo-card-link">Explore Campus Grounds &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: University Seal on Canvas -->
     <section class="section canvas-section" aria-label="University Emblem">
       <div class="canvas-container">
         <div class="canvas-info">
-          <h2 class="section-title" style="text-align: left;">The University Seal</h2>
-          <p>The official crest of AIT stands as a symbol of scientific inquiry, code precision, and academic values.</p>
+          <span class="section-tag">Collegiate Heritage</span>
+          <h2>The Official University Seal</h2>
+          <p>The academic crest of Apex Institute of Technology symbolizes algorithmic precision, scientific curiosity, and moral integrity. Our students and faculty carry this emblem as a mark of technical distinction.</p>
+          <div style="margin-top: 1rem;">
+            <a href="admissions.html" class="btn btn-maroon">Enroll for 2026 Academic Year</a>
+          </div>
         </div>
         <div class="canvas-visual">
           <canvas id="academic-shield" width="180" height="180" aria-label="Apex Academic Seal Shield">
@@ -72,29 +196,57 @@
     </section>
   </main>
 
+  <!-- Rich University Footer -->
   <footer>
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">A</div>
-            <span class="logo-text">Apex Institute</span>
+            <div class="logo-text-group">
+              <span class="logo-text">Apex Institute</span>
+              <span class="logo-tagline" style="color: #9ca3af;">Technology &bull; Research &bull; Leadership</span>
+            </div>
           </div>
-          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+          <p>Apex Institute of Technology is an Autonomous College accredited with NAAC 'A++' Grade, dedicated to cutting-edge research, computing excellence, and societal impact.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Details</h4>
+          <h4>Academics</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">School of Computing</a></li>
+            <li><a href="academics.html">School of Engineering</a></li>
+            <li><a href="academics.html">Curriculum &amp; Syllabus</a></li>
+            <li><a href="academics.html">Research Publications</a></li>
+            <li><a href="login.html">Student Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="admissions.html">Undergraduate B.Tech</a></li>
+            <li><a href="admissions.html">BCA &amp; Computer Apps</a></li>
+            <li><a href="admissions.html">Postgraduate M.Tech/MCA</a></li>
+            <li><a href="admissions.html">Scholarship Programs</a></li>
+            <li><a href="admissions.html">Inquiry Form</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Campus</h4>
           <p>
+            Apex Institute Campus,<br>
             Vazhayur, Malappuram,<br>
-            Kerala.<br><br>
-            Email: admissions@apex.edu.mock<br>
-            Phone: +91 XXXXXXXXXX
+            Kerala &ndash; 673633.<br><br>
+            <strong>Admissions:</strong> admissions@apex.edu.mock<br>
+            <strong>Phone:</strong> +91 483 2890000<br>
+            <strong>Working Hours:</strong> Mon &ndash; Sat, 9:00 AM &ndash; 5:00 PM
           </p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved. Accredited NAAC 'A++' Grade.</p>
       </div>
     </div>
   </footer>

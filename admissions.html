@@ -1,15 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Admissions | Apex Institute of Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions &amp; Enrollment | Apex Institute of Technology</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Top Notice Ribbon -->
+  <div class="top-notice-bar">
+    <div class="top-notice-content">
+      <div class="top-notice-badges">
+        <span class="accred-badge">Admissions 2026–27</span>
+        <span>Entrance Applications Now Open &bull; Merit Scholarships Available</span>
+      </div>
+      <div class="top-quick-links">
+        <span>Helpline: +91 483 2890000</span>
+        <a href="login.html">Student Portal</a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo" id="header-logo">
         <div class="logo-icon">A</div>
-        <span class="logo-text">Apex Institute</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Apex Institute</span>
+          <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+        </div>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -24,15 +44,39 @@
   </header>
 
   <section class="hero" aria-label="Admissions Header">
-    <h1>Admission Inquiry Portal</h1>
-    <p>Please complete our undergraduate program inquiry form below. Our administrative department will review your submissions soon.</p>
+    <h1>Undergraduate &amp; Postgraduate Admissions</h1>
+    <p>Begin your engineering and computing journey at Apex Institute. Submit an inquiry to receive admission counseling, campus visit schedules, and scholarship criteria.</p>
   </section>
 
   <main>
-    <section class="section" aria-label="Application Inquiry">
+    <!-- Admissions Highlights -->
+    <section class="section" aria-label="Admission Steps">
       <div class="section-header">
-        <h2 class="section-title">Inquiry Form</h2>
-        <p class="section-subtitle">Provide details about your academic interests and high school background.</p>
+        <span class="section-tag">Enrollment Process</span>
+        <h2 class="section-title">Why Apply to Apex?</h2>
+        <p class="section-subtitle">A seamless pathway towards world-class technical education, industry mentoring, and global career opportunities.</p>
+      </div>
+
+      <div class="grid-three" style="margin-bottom: 3.5rem;">
+        <div class="card">
+          <h3 class="card-title">Merit Scholarships</h3>
+          <p>Up to 100% tuition waivers for top rankers in state/national entrance tests and outstanding sports performers.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Entrance &amp; Counseling</h3>
+          <p>Transparent single-window counseling and personalized guidance by experienced senior faculty advisors.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Campus Tour &amp; Hostels</h3>
+          <p>Schedule an in-person campus walkthrough to explore student hostels, sports grounds, and innovation labs.</p>
+        </div>
+      </div>
+
+      <!-- Application Form -->
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Direct Application</span>
+        <h2 class="section-title">Online Admission Inquiry Form</h2>
+        <p class="section-subtitle">Please fill in your academic profile and intended program. Our admissions office will get in touch within 24 hours.</p>
       </div>
 
       <div class="form-card">
@@ -51,7 +95,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="phone">Phone Number *</label>
-              <input type="tel" id="phone" name="phone" placeholder="e.g. 555-019-9234" required autocomplete="tel">
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" required autocomplete="tel">
             </div>
             
             <div class="form-group">
@@ -65,17 +109,17 @@
             <select id="program-select" name="program" required>
               <option value="" disabled selected>-- Select a degree option --</option>
               <optgroup label="Undergraduate Programs">
-                <option value="bca">BCA</option>
+                <option value="bca">BCA - Computer Applications</option>
                 <option value="bsc-cs">B.Sc. Computer Science</option>
-                <option value="bba">BBA</option>
-                <option value="bcom">B.Com</option>
-                <option value="bcom-if">B.Com IF</option>
+                <option value="bba">BBA - Business Administration</option>
+                <option value="bcom">B.Com - Bachelor of Commerce</option>
+                <option value="bcom-if">B.Com IF - International Finance</option>
               </optgroup>
               <optgroup label="Postgraduate Programs">
-                <option value="mca">MCA</option>
+                <option value="mca">MCA - Master of Computer Applications</option>
                 <option value="msc-cs">M.Sc. Computer Science</option>
-                <option value="mba">MBA</option>
-                <option value="mcom">M.Com</option>
+                <option value="mba">MBA - Master of Business Admin</option>
+                <option value="mcom">M.Com - Master of Commerce</option>
               </optgroup>
             </select>
           </div>
@@ -85,37 +129,34 @@
             <div class="checkbox-group">
               <label class="option-label">
                 <input type="checkbox" name="interests" value="coding">
-                Coding & Algorithm Club
+                Coding &amp; Algorithm Club (CodeApex)
               </label>
               <label class="option-label">
                 <input type="checkbox" name="interests" value="robotics">
-                Mechatronics & Automated Systems
+                Mechatronics &amp; Automated Systems
               </label>
               <label class="option-label">
                 <input type="checkbox" name="interests" value="athletics">
-                Sports Teams & Track Field
+                Sports Teams &amp; Athletic Competitions
               </label>
             </div>
           </div>
 
           <div class="form-group">
             <label for="sop">Academic Goals Summary *</label>
-            <textarea id="sop" name="sop" placeholder="Please outline your objectives and why you chose AIT..." required></textarea>
+            <textarea id="sop" name="sop" placeholder="Please outline your career objectives and why you are interested in joining Apex Institute..." required></textarea>
           </div>
 
           <div class="form-group">
             <label class="option-label">
               <input type="checkbox" name="consent" required>
-              I certify that all details submitted above are accurate.
+              I certify that all details submitted above are accurate and grant permission to be contacted.
             </label>
           </div>
 
-          <div class="form-disclaimer">
-            * Indicates a mandatory field. All details are kept confidential under student registration policies.
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;" id="form-submit-btn">Submit Inquiry</button>
-
+          <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">
+            Submit Application Inquiry &rarr;
+          </button>
         </form>
       </div>
     </section>
@@ -127,18 +168,41 @@
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">A</div>
-            <span class="logo-text">Apex Institute</span>
+            <div class="logo-text-group">
+              <span class="logo-text">Apex Institute</span>
+              <span class="logo-tagline" style="color: #9ca3af;">Technology &bull; Research &bull; Leadership</span>
+            </div>
           </div>
-          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+          <p>Apex Institute of Technology is dedicated to providing quality technical education and nurturing global engineering talent.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Details</h4>
+          <h4>Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="admissions.html">Undergraduate Programs</a></li>
+            <li><a href="admissions.html">Postgraduate Degrees</a></li>
+            <li><a href="admissions.html">Scholarship Criteria</a></li>
+            <li><a href="login.html">Student Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Campus Tour</h4>
+          <ul class="footer-links">
+            <li><a href="campus.html">Library Facilities</a></li>
+            <li><a href="campus.html">Robotics Lab</a></li>
+            <li><a href="campus.html">Hostel Life</a></li>
+            <li><a href="campus.html">Sports Arena</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Campus</h4>
           <p>
             Vazhayur, Malappuram,<br>
-            Kerala.<br><br>
-            Email: admissions@apex.edu.mock<br>
-            Phone: +91 XXXXXXXXXX
+            Kerala &ndash; 673633.<br><br>
+            <strong>Admissions:</strong> admissions@apex.edu.mock<br>
+            <strong>Phone:</strong> +91 483 2890000
           </p>
         </div>
       </div>

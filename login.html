@@ -1,15 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Login / Register | Apex Institute of Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register | Apex Institute of Technology</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Top Notice Ribbon -->
+  <div class="top-notice-bar">
+    <div class="top-notice-content">
+      <div class="top-notice-badges">
+        <span class="accred-badge">Student Portal</span>
+        <span>Secure Student Information System &bull; Apex Institute of Technology</span>
+      </div>
+      <div class="top-quick-links">
+        <a href="index.html">Home</a>
+        <a href="admissions.html">Admissions</a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo" id="header-logo">
         <div class="logo-icon">A</div>
-        <span class="logo-text">Apex Institute</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Apex Institute</span>
+          <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+        </div>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -23,21 +43,29 @@
     </div>
   </header>
 
-  <section class="hero" aria-label="Portal Header">
-    <h1>Student Portal Access</h1>
-    <p>Sign in to check course enrolments or create a new student account to submit registration files.</p>
+  <section class="hero" id="page-hero" aria-label="Portal Header">
+    <h1 id="hero-title">Student Portal Access</h1>
+    <p id="hero-subtitle">Sign in to access your student dashboard. Only registered student accounts are authorized to log in.</p>
   </section>
 
   <main>
-    <section class="section" aria-label="Account Access Form">
+    <!-- ========================================================
+         SECTION 1: AUTHENTICATION (LOGIN & REGISTRATION)
+         ======================================================== -->
+    <section class="section" id="auth-section" aria-label="Account Access Form">
       <div class="grid-three">
         
+        <!-- STUDENT LOGIN PANEL -->
         <div class="card" id="login-panel">
           <h3 class="card-title">Student Login</h3>
-          <form action="#" method="POST">
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.25rem;">
+            Enter your registered university email or username to access your personal dashboard.
+          </p>
+
+          <form id="student-login-form">
             <div class="form-group">
               <label for="login-username">Email / Username *</label>
-              <input type="text" id="login-username" name="username" placeholder="e.g. john.smith" required autocomplete="username">
+              <input type="text" id="login-username" name="username" placeholder="e.g. alex.johnson@apex.edu" required autocomplete="username">
             </div>
             
             <div class="form-group">
@@ -45,15 +73,20 @@
               <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
             </div>
             
-
-            
-            <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">Sign In</button>
+            <button type="submit" class="btn btn-primary" id="btn-login-submit" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">
+              Sign In
+            </button>
           </form>
         </div>
 
+        <!-- NEW STUDENT REGISTRATION PANEL -->
         <div class="card" id="register-panel">
           <h3 class="card-title">New Registration</h3>
-          <form action="#" method="POST">
+          <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.25rem;">
+            Don't have an account yet? Register here to create your student login credentials.
+          </p>
+
+          <form id="student-register-form">
             <div class="form-group">
               <label for="register-name">Full Name *</label>
               <input type="text" id="register-name" name="name" placeholder="e.g. Jane Doe" required autocomplete="name">
@@ -62,6 +95,17 @@
             <div class="form-group">
               <label for="register-email">Email Address *</label>
               <input type="email" id="register-email" name="email" placeholder="e.g. jane.doe@example.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="register-program">Degree Program *</label>
+              <select id="register-program" name="program" required>
+                <option value="B.Tech Computer Science & Engineering">B.Tech Computer Science & Engineering</option>
+                <option value="B.Tech Electronics & Communication">B.Tech Electronics & Communication</option>
+                <option value="BCA - Computer Applications">BCA - Computer Applications</option>
+                <option value="B.Sc Data Science & AI">B.Sc Data Science & AI</option>
+                <option value="MCA - Master of Computer Applications">MCA - Master of Computer Applications</option>
+              </select>
             </div>
 
             <div class="form-group">
@@ -74,8 +118,213 @@
               <input type="password" id="register-confirm" name="confirm-password" placeholder="••••••••" required autocomplete="new-password">
             </div>
 
-            <button type="submit" class="btn btn-primary" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">Register Account</button>
+            <button type="submit" class="btn btn-primary" id="btn-register-submit" style="background-color: #990000; color: #ffffff; width: 100%; border: none;">
+              Register Account
+            </button>
           </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         SECTION 2: STUDENT DASHBOARD (APPEARS AFTER LOGIN)
+         ======================================================== -->
+    <section class="section" id="dashboard-section" style="display: none;" aria-label="Student Dashboard">
+      
+      <!-- Student Banner -->
+      <div class="student-banner">
+        <div class="student-profile-lead">
+          <div class="student-avatar" id="dash-avatar">AJ</div>
+          <div class="student-meta">
+            <h2>Welcome back, <span id="dash-student-name">Alex Johnson</span>!</h2>
+            <p id="dash-student-program">B.Tech Computer Science &amp; Engineering</p>
+            <div class="student-pill-group">
+              <span class="pill-badge" id="dash-student-id">ID: AIT-2026-1001</span>
+              <span class="pill-badge active">&#9679; Status: Enrolled &amp; Active</span>
+              <span class="pill-badge" id="dash-student-email">alex.johnson@apex.edu</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline" id="btn-logout" style="border-color: #ffffff; color: #ffffff; cursor: pointer;">
+            Sign Out &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Cumulative GPA</div>
+          <div class="stat-value">3.85 <span style="font-size: 1rem; color: #666;">/ 4.0</span></div>
+          <div class="stat-desc">Top 5% &bull; Dean's Honour List</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Semester Attendance</div>
+          <div class="stat-value" style="color: #2e7d32;">94.4%</div>
+          <div class="stat-desc">Eligible for all End-Sem Examinations</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Enrolled Courses</div>
+          <div class="stat-value">5</div>
+          <div class="stat-desc">18 Total Academic Credits</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">Current Academic Term</div>
+          <div class="stat-value" style="font-size: 1.5rem; line-height: 2rem;">Spring 2026</div>
+          <div class="stat-desc">Semester 4 &bull; Midterms in 3 weeks</div>
+        </div>
+      </div>
+
+      <!-- Two-Column Layout -->
+      <div class="dashboard-grid">
+        <!-- Left: Coursework & Circulars -->
+        <div>
+          <div class="card" style="margin-bottom: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <h3 class="card-title" style="margin-bottom: 0;">Enrolled Courses &amp; Timetable</h3>
+              <span class="badge-program">5 Courses Active</span>
+            </div>
+            
+            <div class="table-container" style="margin-bottom: 0;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Course</th>
+                    <th>Title &amp; Instructor</th>
+                    <th>Credits</th>
+                    <th>Class Schedule</th>
+                    <th>Attendance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>CS301</strong></td>
+                    <td>
+                      <div><strong>Data Structures &amp; Algorithms</strong></div>
+                      <div style="font-size: 0.85rem; color: #666;">Dr. K. Narayanan &bull; Lecture Hall 2B</div>
+                    </td>
+                    <td>4</td>
+                    <td style="font-size: 0.9rem;">Mon, Wed 09:30 - 10:45 AM</td>
+                    <td><span style="font-weight: bold; color: #2e7d32;">96%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CS302</strong></td>
+                    <td>
+                      <div><strong>Database Management Systems</strong></div>
+                      <div style="font-size: 0.85rem; color: #666;">Prof. Anitha Menon &bull; CS Lab 3</div>
+                    </td>
+                    <td>4</td>
+                    <td style="font-size: 0.9rem;">Tue, Thu 11:00 - 12:15 PM</td>
+                    <td><span style="font-weight: bold; color: #2e7d32;">92%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CS303</strong></td>
+                    <td>
+                      <div><strong>Web Application Architecture</strong></div>
+                      <div style="font-size: 0.85rem; color: #666;">Prof. Rahul Varma &bull; Software Studio 1</div>
+                    </td>
+                    <td>3</td>
+                    <td style="font-size: 0.9rem;">Mon, Fri 02:00 - 03:30 PM</td>
+                    <td><span style="font-weight: bold; color: #2e7d32;">95%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>MA301</strong></td>
+                    <td>
+                      <div><strong>Discrete Mathematics &amp; Graph Theory</strong></div>
+                      <div style="font-size: 0.85rem; color: #666;">Dr. E. Sreedharan &bull; Seminar Hall A</div>
+                    </td>
+                    <td>4</td>
+                    <td style="font-size: 0.9rem;">Wed, Fri 11:00 - 12:15 PM</td>
+                    <td><span style="font-weight: bold; color: #2e7d32;">91%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CS305</strong></td>
+                    <td>
+                      <div><strong>Operating Systems &amp; System Programming</strong></div>
+                      <div style="font-size: 0.85rem; color: #666;">Prof. Priya Nair &bull; Systems Lab 2</div>
+                    </td>
+                    <td>3</td>
+                    <td style="font-size: 0.9rem;">Tue, Thu 02:00 - 03:30 PM</td>
+                    <td><span style="font-weight: bold; color: #2e7d32;">98%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Campus Notices &amp; Circulars</h3>
+            <ul class="styled-list" style="margin-top: 1rem;">
+              <li>
+                <strong>Mid-Semester Examination Timetable</strong>
+                The Spring 2026 theory and practical mid-term examinations commence from March 18, 2026. Hall tickets available next week.
+              </li>
+              <li>
+                <strong>National Hackathon Registration Open</strong>
+                Apex Institute is hosting the annual 'CodeApex 2026' National Hackathon. Form teams of 3-4 and submit abstracts by Friday.
+              </li>
+              <li>
+                <strong>Digital Library Access Renewed (IEEE / ACM)</strong>
+                All enrolled students now have updated proxy credentials to access the IEEE and ACM digital libraries through the student intranet.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Profile & Actions -->
+        <div>
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3 class="card-title">Student Profile Details</h3>
+            <ul class="info-list" style="margin-top: 1rem;">
+              <li>
+                <span class="info-label">Full Name:</span>
+                <span class="info-value"><strong id="dash-info-name">Alex Johnson</strong></span>
+              </li>
+              <li>
+                <span class="info-label">Student ID:</span>
+                <span class="info-value"><code id="dash-info-id">AIT-2026-1001</code></span>
+              </li>
+              <li>
+                <span class="info-label">Registered Email:</span>
+                <span class="info-value" id="dash-info-email">alex.johnson@apex.edu</span>
+              </li>
+              <li>
+                <span class="info-label">Program:</span>
+                <span class="info-value" id="dash-info-program">B.Tech Computer Science &amp; Engineering</span>
+              </li>
+              <li>
+                <span class="info-label">Department:</span>
+                <span class="info-value" id="dash-info-dept">School of Computing &amp; Technology</span>
+              </li>
+              <li>
+                <span class="info-label">Academic Status:</span>
+                <span class="info-value" style="color: #2e7d32; font-weight: bold;">Enrolled / Regular</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Quick Actions</h3>
+            <div class="action-stack" style="margin-top: 1rem;">
+              <a href="academics.html" class="btn btn-outline" style="color: #990000; border-color: #990000;">
+                View Curriculum &amp; Syllabi
+              </a>
+              <a href="admissions.html" class="btn btn-outline" style="color: #990000; border-color: #990000;">
+                Submit Admission Inquiry
+              </a>
+              <a href="campus.html" class="btn btn-outline" style="color: #990000; border-color: #990000;">
+                Explore Campus Life &amp; Labs
+              </a>
+              <button type="button" class="btn btn-primary" id="btn-quick-logout" style="background-color: #990000; color: #ffffff; cursor: pointer;">
+                Log Out of Student Portal
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -88,23 +337,45 @@
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">A</div>
-            <span class="logo-text">Apex Institute</span>
+            <div class="logo-text-group">
+              <span class="logo-text">Apex Institute</span>
+              <span class="logo-tagline" style="color: #9ca3af;">Technology &bull; Research &bull; Leadership</span>
+            </div>
           </div>
-          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+          <p>Apex Institute of Technology is dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Details</h4>
+          <h4>Portal Links</h4>
+          <ul class="footer-links">
+            <li><a href="login.html">Student Sign In</a></li>
+            <li><a href="login.html">New Registration</a></li>
+            <li><a href="academics.html">Academic Records</a></li>
+            <li><a href="admissions.html">Admissions 2026</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Campus Help</h4>
+          <ul class="footer-links">
+            <li><a href="campus.html">Library Access</a></li>
+            <li><a href="campus.html">Hostel Inquiries</a></li>
+            <li><a href="campus.html">Sports Complex</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Support</h4>
           <p>
             Vazhayur, Malappuram,<br>
-            Kerala.<br><br>
-            Email: admissions@apex.edu.mock<br>
-            Phone: +91 XXXXXXXXXX
+            Kerala &ndash; 673633.<br><br>
+            <strong>Admissions:</strong> admissions@apex.edu.mock<br>
+            <strong>Phone:</strong> +91 483 2890000
           </p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved.</p>
+        <p>&copy; 2026 Apex Institute of Technology. All Rights Reserved. NAAC 'A++' Accredited.</p>
       </div>
     </div>
   </footer>

@@ -28,8 +28,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="nav-container">
             <a href="index.html" class="logo">
                 <div class="logo-icon">A</div>
-                <span class="logo-text">Apex Institute</span>
+                <div class="logo-text-group">
+                    <span class="logo-text">Apex Institute</span>
+                    <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+                </div>
             </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 

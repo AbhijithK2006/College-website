@@ -1,15 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <title>Academics | Apex Institute of Technology</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics &amp; Degree Programs | Apex Institute of Technology</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Top Notice Ribbon -->
+  <div class="top-notice-bar">
+    <div class="top-notice-content">
+      <div class="top-notice-badges">
+        <span class="accred-badge">Academics</span>
+        <span>Accredited NAAC 'A++' Grade &bull; NBA Accredited Programs</span>
+      </div>
+      <div class="top-quick-links">
+        <a href="admissions.html">Admissions 2026–27</a>
+        <a href="login.html">Student Portal</a>
+      </div>
+    </div>
+  </div>
 
   <header>
     <div class="nav-container">
       <a href="index.html" class="logo" id="header-logo">
         <div class="logo-icon">A</div>
-        <span class="logo-text">Apex Institute</span>
+        <div class="logo-text-group">
+          <span class="logo-text">Apex Institute</span>
+          <span class="logo-tagline">Of Technology &bull; Malappuram</span>
+        </div>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -24,43 +44,68 @@
   </header>
 
   <section class="hero" aria-label="Academics Header">
-    <h1>Academic Departments & Curriculums</h1>
-    <p>AIT offers standardized four-year bachelor's degrees and two-year postgraduate courses across engineering and computer science.</p>
+    <h1>Academic Departments &amp; Curriculums</h1>
+    <p>AIT offers standardized four-year bachelor's degrees and two-year postgraduate programs designed in consultation with premier technology enterprises and academic scholars.</p>
   </section>
 
   <main>
+    <!-- Section 1: Academic Schools with Photography -->
     <section class="section" aria-label="Our Departments">
       <div class="section-header">
+        <span class="section-tag">Centres of Excellence</span>
         <h2 class="section-title">Academic Schools</h2>
-        <p class="section-subtitle">Our degree courses are designed and administered by three core technical schools.</p>
+        <p class="section-subtitle">Our degree courses are designed and administered by specialized technical schools with modern research laboratories.</p>
       </div>
       
       <div class="grid-three">
-        <div class="card" id="school-computing">
-          <h3 class="card-title">School of Computing</h3>
-          <p>Offers undergraduate courses in Computer Science, Software Architecture, and Artificial Intelligence fields.</p>
+        <div class="photo-card" id="school-computing">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/classroom.png" alt="School of Computing at Apex Institute">
+            <span class="photo-card-badge">Computing &amp; AI</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>School of Computing</h3>
+            <p>Undergraduate and master's specializations in Software Architecture, Full-Stack Engineering, Cloud Networks, and Artificial Intelligence.</p>
+            <a href="#ug-programs-table" class="photo-card-link">View Degree Courses &darr;</a>
+          </div>
         </div>
         
-        <div class="card" id="school-engineering">
-          <h3 class="card-title">School of Engineering</h3>
-          <p>Coordinates hands-on prototyping degrees in Robotics, Mechatronics, and Sustainable Electric Grids.</p>
+        <div class="photo-card" id="school-engineering">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/robotics_lab.jpg" alt="School of Engineering and Robotics Hub">
+            <span class="photo-card-badge">Robotics &amp; Hardware</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>School of Engineering</h3>
+            <p>Hands-on prototyping degrees in Mechatronics, Embedded IoT Systems, Automated Robotics, and Green Power Grids.</p>
+            <a href="#ug-programs-table" class="photo-card-link">View Engineering Curricula &darr;</a>
+          </div>
         </div>
         
-        <div class="card" id="school-design">
-          <h3 class="card-title">School of Tech Design</h3>
-          <p>Focuses on Human-Computer Interaction, Interface Design paradigms, and virtual usability frameworks.</p>
+        <div class="photo-card" id="school-design">
+          <div class="photo-card-img-wrapper">
+            <img src="photos/library.png" alt="School of Research and Digital Library">
+            <span class="photo-card-badge">Research &amp; Analytics</span>
+          </div>
+          <div class="photo-card-body">
+            <h3>School of Management &amp; Commerce</h3>
+            <p>Focuses on Technology Management, Business Analytics, International Finance, and computational market modeling.</p>
+            <a href="#ug-programs-table" class="photo-card-link">Explore Business Degrees &darr;</a>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Section 2: Undergraduate Table with Search Filter -->
     <section class="section" style="padding-top: 0;" aria-label="Program List">
       <div class="section-header">
+        <span class="section-tag">Undergraduate Admissions</span>
         <h2 class="section-title">Undergraduate Course Details</h2>
-        <p class="section-subtitle">A summary table outlining our bachelor's programs, duration, and admission requirements.</p>
+        <p class="section-subtitle">A summary table outlining our bachelor's programs, duration, fee structure, and eligibility requirements.</p>
       </div>
       
-      <div style="margin-bottom: 1.5rem; text-align: center;">
-        <input type="text" id="course-search" placeholder="🔍 Search courses by code, name, or department (e.g. BCA, Computing)..." style="width: 100%; max-width: 550px; padding: 0.75rem 1rem; border: 2px solid #990000; border-radius: 4px; font-size: 0.95rem;">
+      <div style="margin-bottom: 2rem; text-align: center;">
+        <input type="text" id="course-search" placeholder="🔍 Live Course Filter: Type course code, title, or department (e.g. BCA, Computing)..." style="width: 100%; max-width: 600px; padding: 0.9rem 1.25rem; border: 2px solid var(--primary-color); border-radius: 6px; font-size: 1rem; box-shadow: var(--shadow-sm);">
       </div>
 
       <div class="table-container">
@@ -114,15 +159,17 @@
               <td>School of Commerce</td>
               <td>3 Years (6 Semesters)</td>
               <td>₹18,000</td>
-              <td>12th Grade / Commerce & Math</td>
+              <td>12th Grade / Commerce &amp; Math</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div class="section-header" style="margin-top: 3rem; margin-bottom: 2.5rem;">
-        <h2 class="section-title">Postgraduate Course Details</h2>
-        <p class="section-subtitle">A summary table outlining our master's programs, duration, and admission requirements.</p>
+      <!-- Section 3: Postgraduate Programs -->
+      <div class="section-header" style="margin-top: 3.5rem; margin-bottom: 2rem;">
+        <span class="section-tag">Postgraduate Studies</span>
+        <h2 class="section-title">Postgraduate Programs</h2>
+        <p class="section-subtitle">Advanced master's degrees with research dissertation components and industry internships.</p>
       </div>
 
       <div class="table-container">
@@ -175,29 +222,31 @@
       </div>
     </section>
 
+    <!-- Section 4: Academic Infrastructure -->
     <section class="section canvas-section" aria-label="Academic Facilities">
-      <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Campus Facilities</h2>
-      <p style="margin-bottom: 1.5rem;">AIT supports academic learning through well-maintained spaces and specialized libraries.</p>
+      <span class="section-tag">State-of-the-Art</span>
+      <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Academic Learning Infrastructure</h2>
+      <p style="margin-bottom: 2rem; color: var(--text-muted);">AIT supports academic learning through well-maintained spaces, high-speed fiber connectivity, and dedicated research pods.</p>
       <ul class="styled-list">
         <li>
           <strong>Workstation Classrooms</strong>
-          Dual-monitor desktop hubs integrated with testing database sandboxes.
+          Dual-monitor desktop hubs integrated with testing database sandboxes and cloud virtual machines.
         </li>
         <li>
-          <strong>Electronics Lab</strong>
-          Equipped with oscilloscopes, signal boards, mechatronics kits, and soldering stations.
+          <strong>Electronics &amp; Embedded Lab</strong>
+          Equipped with digital storage oscilloscopes, signal generators, FPGA boards, and solder rework stations.
         </li>
         <li>
           <strong>Main Library Quad</strong>
-          Three floors of print volumes, journals, and dedicated research study desks.
+          Three floors of print volumes, academic journals, and dedicated faculty-student consultation cubicles.
         </li>
         <li>
-          <strong>Digital Libraries</strong>
-          Every student receives online credentials to consult IEEE archives and cataloged journals 24/7.
+          <strong>Digital Journal Repositories</strong>
+          Every student receives online credentials to consult IEEE, ACM, Springer, and ScienceDirect archives 24/7.
         </li>
         <li>
-          <strong>Study Lounges</strong>
-          Comfortable workrooms for students preparing projects, hackathons, and tech seminars.
+          <strong>Innovation &amp; Prototyping Sandbox</strong>
+          Round-the-clock lab space for students working on startup ideas, capstone projects, and hackathons.
         </li>
       </ul>
     </section>
@@ -209,18 +258,40 @@
         <div class="footer-col">
           <div class="footer-logo">
             <div class="logo-icon">A</div>
-            <span class="logo-text">Apex Institute</span>
+            <div class="logo-text-group">
+              <span class="logo-text">Apex Institute</span>
+              <span class="logo-tagline" style="color: #9ca3af;">Technology &bull; Research &bull; Leadership</span>
+            </div>
           </div>
-          <p>Dedicated to delivering quality technical education, fostering computational innovation, and building skilled careers.</p>
+          <p>Apex Institute of Technology is dedicated to academic excellence, computational innovation, and building skilled careers.</p>
         </div>
 
         <div class="footer-col">
-          <h4>Contact Details</h4>
+          <h4>Academics</h4>
+          <ul class="footer-links">
+            <li><a href="academics.html">School of Computing</a></li>
+            <li><a href="academics.html">School of Engineering</a></li>
+            <li><a href="academics.html">Course Catalog</a></li>
+            <li><a href="login.html">Student Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Admissions</h4>
+          <ul class="footer-links">
+            <li><a href="admissions.html">Degree Inquiries</a></li>
+            <li><a href="admissions.html">Scholarship Exams</a></li>
+            <li><a href="admissions.html">Fee Structures</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Campus</h4>
           <p>
             Vazhayur, Malappuram,<br>
-            Kerala.<br><br>
-            Email: admissions@apex.edu.mock<br>
-            Phone: +91 XXXXXXXXXX
+            Kerala &ndash; 673633.<br><br>
+            <strong>Admissions:</strong> admissions@apex.edu.mock<br>
+            <strong>Phone:</strong> +91 483 2890000
           </p>
         </div>
       </div>
